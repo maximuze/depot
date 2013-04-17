@@ -80,4 +80,15 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+    def who_bought
+      @product = Product.find(params[:id])
+      @latest_order = @product.orders.order(:updated_at).last
+      if stale?(etag: @latest_order, last_modified: @latest_order.created_at.utc)
+        respond_to do |format|
+        format.atom
+        end
+      end
+    end
+  
 end
