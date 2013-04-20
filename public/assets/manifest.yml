@@ -1,0 +1,9 @@
+---
+logo.png: logo.png
+logo/index.png: logo.png
+application.js: application.js
+application/index.js: application.js
+application.css: application.css
+application/index.css: application.css
+jquery.min.map: jquery.min.map
+jquery/index.min.map: jquery.min.map
